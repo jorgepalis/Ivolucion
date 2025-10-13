@@ -79,20 +79,22 @@ Lógica relevante
 - Al crear una tarea desde la API el estado se fuerza a `Pendiente` (esto se implementa en el serializer). Al editar una tarea sí es posible cambiar su `status` mediante el campo `status_id`.
 - La autenticación se realiza por JWT usando `djangorestframework-simplejwt`; muchas rutas requieren que el usuario esté autenticado.
 - Cada app tiene una carpeta management con algunos comandos utiles para crear registros basicos de funcionamiento en la bd.
+- Los usuarios con rol `client` pueden administrar sus propias tareas mientas que los usuarios de rol `admin` tienen control total.
 
 Comandos útiles
 ---------------
 
-```para crear roles en la bd
+```bash
+# para crear roles en la bd
 python manage.py create_roles
-```
 
-```para crear estados en la bd
+# para crear estados en la bd
 python manage.py create_status
-```
 
-```para crear roles en la bd
+
+# para crear roles en la bd
 python manage.py create_categorys
+
 ```
 
 
