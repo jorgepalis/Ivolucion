@@ -92,7 +92,7 @@ python manage.py create_roles
 python manage.py create_status
 
 
-# para crear roles en la bd
+# para crear categorias en la bd
 python manage.py create_categorys
 
 ```
