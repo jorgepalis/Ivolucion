@@ -110,14 +110,19 @@ Usuarios de prueba
 
 En la base de datos incluida puedes encontrar usuarios de prueba útiles para desarrollo. 
 
+```bash
+# Admin
 Admin-user: admin@admin.com
 Admin-password: Admin21. (incluido el punto)
 
+# Cliente 1
 Client-user1: user1@example.com
 Client-password: Client21. (incluido el punto)
 
+# Cliente 2
 Client-user2: user2@example.com
 Client-password: Client21. (incluido el punto)
+```
 
 
 
