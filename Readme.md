@@ -100,7 +100,8 @@ python manage.py create_categorys
 
 Testing
 ---------------
-```Para ejecutar los tests
+```bash
+# Para ejecutar los tests
 python -m pytest
 ```
 
@@ -109,16 +110,13 @@ Usuarios de prueba
 
 En la base de datos incluida puedes encontrar usuarios de prueba útiles para desarrollo. 
 
-Admin
 Admin-user: admin@admin.com
 Admin-password: Admin21. (incluido el punto)
 
-Cliente 1
-Client-user: user1@example.com
+Client-user1: user1@example.com
 Client-password: Client21. (incluido el punto)
 
-Cliente 2
-Client-user: user2@example.com
+Client-user2: user2@example.com
 Client-password: Client21. (incluido el punto)
 
 
