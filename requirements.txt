@@ -1,0 +1,6 @@
+django == 4.2
+djangorestframework == 3.16
+djangorestframework-simplejwt == 5.5.1
+drf-spectacular == 0.28.0
+pytest == 8.3.3
+pytest-django == 4.9.0
