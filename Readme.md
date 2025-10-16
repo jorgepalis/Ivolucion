@@ -30,6 +30,7 @@ Configuración rápida sin docker
 --------------------
 
 
+
 ```bash
 # crear y activar entorno si aún no existe
 python -m venv env
