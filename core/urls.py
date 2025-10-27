@@ -16,11 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularRedocView,
     SpectacularSwaggerView,
 )
+ 
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,3 +33,14 @@ urlpatterns = [
     path('api/users/', include('users.urls')),
     path('api/', include('tasks.urls')),
 ]
+
+if settings.DEBUG:
+    try:
+        import debug_toolbar  # type: ignore
+    except Exception:
+        debug_toolbar = None  # type: ignore
+    if debug_toolbar:
+        urlpatterns += [
+            path('__debug__/', include(debug_toolbar.urls)),
+        ]
+

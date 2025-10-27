@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-2pse3d=_=4d*r6b4y&qzy_z&n)69#3*(_jlqr=2esb)p&_)2i3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -42,16 +42,19 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'users',
     'tasks',
+    "debug_toolbar",
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -153,4 +156,14 @@ SPECTACULAR_SETTINGS = {
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7)
+}
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
+
+# Django Debug Toolbar configuration: render panels server-side to avoid
+# client-side fetches that require store_id (mitiga errores 500 al abrir History)
+DEBUG_TOOLBAR_CONFIG = {
+    "RENDER_PANELS": True,
 }

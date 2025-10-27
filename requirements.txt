@@ -1,6 +1,8 @@
-django == 4.2
+django == 4.2.9
 djangorestframework == 3.16
 djangorestframework-simplejwt == 5.5.1
 drf-spectacular == 0.28.0
 pytest == 8.3.3
 pytest-django == 4.9.0
+django-debug-toolbar==5.0.1
+zappa == 0.60.2
